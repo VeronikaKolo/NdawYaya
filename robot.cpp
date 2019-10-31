@@ -9,10 +9,10 @@ participant::position* robot::positionRobot() const
 //detecte si le joueur est present autour de lui
 bool robot::detecterJoueur( const joueur&j) const
 {
-    if ((j.d_case.d_numColonne==d_case.d_numColonne && j.d_case.d_numLigne==(d_case.d_numLigne+1))||
-        (j.d_case.d_numColonne==d_case.d_numColonne && j.d_case.d_numLigne==(d_case.d_numLigne+-1))||
-         (j.d_case.d_numColonne==(d_case.d_numColonne+1) && j.d_case.d_numLigne==d_case.d_numLigne)||
-            (j.d_case.d_numColonne==(d_case.d_numColonne+1) && j.d_case.d_numLigne==d_case.d_numLigne))
+    if ((j.positionJoueur.numColonne==d_case.d_numColonne && j.positionJoueur.numLigne==(d_case.d_numLigne+1))||
+        (j.positionJoueur.numColonne==d_case.d_numColonne && j.positionJoueur.numLigne==(d_case.d_numLigne+-1))||
+         (j.positionJoueur.numColonne==(d_case.d_numColonne+1) && j.positionJoueur.numLigne==d_case.d_numLigne)||
+            (j.positionJoueur.numColonne==(d_case.d_numColonne+1) && j.positionJoueur.numLigne==d_case.d_numLigne))
                 return true;
         return false;
 }
