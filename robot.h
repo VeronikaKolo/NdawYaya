@@ -9,6 +9,7 @@ public :
     position*positionRobot() const;
     bool detecterJoueur(const joueur&j)const;
     void deplacerRobot(const joueur&j);
+    void deplacerRobotAuHasard();
 
 private :
     position*d_case;
